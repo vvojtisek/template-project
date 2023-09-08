@@ -37,6 +37,7 @@ To set up a development environment for Python projects using docker-compose and
     RUN apt-get update && \
         apt-get install -y wget && \
         wget -qO- https://micromamba.snakepit.net/api/micromamba/linux-64/latest | tar xvj bin/micromamba
+    CMD ["tail", "-f", "/dev/null"] # This will keep the container alive
     ```
 
 5. **Mamba Environment File**: Create a `mamba_environment.yml` file in the Backend folder to specify Python packages.
