@@ -1,10 +1,9 @@
-version: '24'
+version: '3'
 services:
   backend:
     image: python:3.11
     volumes:
-      - ./Backend:/app
+      - ./backend:/app
     build: 
       context: ./backend
-      Dockerfile: Bockerfile
-
+      dockerfile: Dockerfile
