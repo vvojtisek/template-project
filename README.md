@@ -23,7 +23,7 @@ To set up a development environment for Python projects using docker-compose and
     version: '3'
     services:
       backend:
-        image: python:3.8
+        image: python:3.11
         volumes:
           - ./Backend:/app
         build: 
@@ -33,7 +33,7 @@ To set up a development environment for Python projects using docker-compose and
 
 4. **Dockerfile for Mamba**: In the same folder where your backend code resides, create a `Dockerfile` to install mamba.
     ```Dockerfile
-    FROM python:3.8
+    FROM python:3.11
     RUN apt-get update && \
         apt-get install -y wget && \
         wget -qO- https://micromamba.snakepit.net/api/micromamba/linux-64/latest | tar xvj bin/micromamba
@@ -46,8 +46,16 @@ To set up a development environment for Python projects using docker-compose and
     channels:
       - defaults
     dependencies:
-      - numpy
-      - pandas
+       - numpy
+      - polars
+      - matplotlib
+      - scipy
+      - scikit-learn
+      - pytorch
+      - keras
+      - tensorflow
+      - httpx
+      - beautifulsoup4
     ```
 
 ### Initialization and Usage
@@ -64,4 +72,4 @@ To set up a development environment for Python projects using docker-compose and
 
 8. **Repeat for Other Projects**: For each new project, repeat steps 1-7.
 
-By following these steps, you can efficiently manage multiple Python projects using docker-compose and mamba without the need for Anaconda, Conda, or Miniconda.
+By following these steps, you can efficiently manage multiple Python projects using docker-compose and mamba without needing Anaconda, Conda, or Miniconda.
