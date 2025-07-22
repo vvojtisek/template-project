@@ -9,7 +9,7 @@ This guide walks you through configuring Git on your local machine and using a h
 ```bash
 git config --global user.name "Vladimír Vojtíšek"
 git config --global user.email "vvojtisek@gmail.com"
-git config --global core.editor "vim"
+git config --global core.editor "code --wait"  # VS Code
 git config --global color.ui auto
 git config --global core.autocrlf input
 ```
