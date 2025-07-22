@@ -36,7 +36,7 @@ git config --global user.email "vvojtisek@gmail.com"
 2. Add SSH key to the SSH agent:
    ```bash
    eval "$(ssh-agent -s)"
-   ssh-add ~/.ssh/id_rsa
+   ssh-add ~/.ssh/id_ed25519
    ```
 
 3. Add the public key to your remote repository account (e.g., GitHub).
